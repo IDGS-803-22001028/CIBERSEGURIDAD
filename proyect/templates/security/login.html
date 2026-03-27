@@ -1,0 +1,30 @@
+{% extends "security/base.html" %}
+
+{% block content %}
+<div class="card-glass">
+    <h2 class="card-title">Iniciar Sesión</h2>
+    <p class="card-subtitle">Ingresa tus credenciales para continuar</p>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="alert-danger"><i class="fas fa-exclamation-circle"></i> {{ messages[0] }}</div>
+    {% endif %}
+    {% endwith %}
+
+    <form method="POST" action="/security/login">
+        <div class="field">
+            <label>Correo electrónico</label>
+            <input type="email" name="email" placeholder="correo@ejemplo.com" autofocus required>
+        </div>
+        <div class="field">
+            <label>Contraseña</label>
+            <input type="password" name="password" placeholder="••••••••" required>
+        </div>
+        <label class="check-label">
+            <input type="checkbox" name="remember"> Recordarme
+        </label>
+        <button type="submit" class="btn-primary"><i class="fas fa-sign-in-alt"></i> Entrar</button>
+    </form>
+    <div class="form-link">¿No tienes cuenta? <a href="{{ url_for('auth.register') }}">Regístrate aquí</a></div>
+</div>
+{% endblock %}

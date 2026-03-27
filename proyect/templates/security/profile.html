@@ -1,0 +1,30 @@
+{% extends "security/base.html" %}
+
+{% block content %}
+<div class="card-glass" style="max-width:500px;">
+    <div style="text-align:center; margin-bottom:1.5rem;">
+        <div style="width:80px; height:80px; border-radius:50%; background:linear-gradient(135deg,#7c3aed,#a78bfa); display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; font-size:2rem;">👤</div>
+        <h2 class="card-title">{{ name }}</h2>
+        <p class="card-subtitle">Perfil de usuario</p>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:1.2rem; display:flex; flex-direction:column; gap:0.8rem;">
+        <div style="display:flex; align-items:center; gap:0.75rem; background:rgba(255,255,255,0.05); border-radius:10px; padding:0.75rem 1rem;">
+            <span style="color:#a78bfa; font-size:1.1rem;"><i class="fas fa-user"></i></span>
+            <div>
+                <div style="color:rgba(255,255,255,0.45); font-size:0.75rem;">Nombre completo</div>
+                <div style="color:#fff; font-weight:600;">{{ name }}</div>
+            </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:0.75rem; background:rgba(255,255,255,0.05); border-radius:10px; padding:0.75rem 1rem;">
+            <span style="color:#a78bfa; font-size:1.1rem;"><i class="fas fa-envelope"></i></span>
+            <div>
+                <div style="color:rgba(255,255,255,0.45); font-size:0.75rem;">Correo electrónico</div>
+                <div style="color:#fff; font-weight:600;">{{ email }}</div>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top:1.5rem; text-align:center;">
+    </div>
+</div>
+{% endblock %}
+ 

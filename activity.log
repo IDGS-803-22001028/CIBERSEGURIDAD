@@ -1,0 +1,71 @@
+2026-03-19 21:40:22,487 INFO: Iniciando la aplicaciï¿½n de Autenticaciï¿½n 
+2026-03-19 21:40:23,627 INFO: Iniciando la aplicaciï¿½n de Autenticaciï¿½n 
+2026-03-19 21:44:58,429 INFO: NUEVO USUARIO: Se ha registrado una nueva cuenta: Luis@gmail.com 
+2026-03-19 21:45:29,090 WARNING: FALLO DE LOGIN: Intento fallido para el correo: Luis@gmail.com 
+2026-03-19 21:45:54,248 INFO: LOGIN EXITOSO: Usuario Luis@gmail.com (ID: 8) ha iniciado sesión. 
+2026-03-19 21:45:54,264 INFO: ACCESO A PERFIL: El usuario Luis@gmail.com entró a su perfil. 
+2026-03-19 21:46:18,118 INFO: LOGOUT: Usuario Luis@gmail.com ha cerrado sesión. 
+2026-03-26 21:20:11,413 INFO: Iniciando la aplicación de Autenticación 
+2026-03-26 21:25:38,135 INFO: ============================================================ 
+2026-03-26 21:25:38,135 INFO: INICIO DE APLICACIÓN: Sistema de Autenticación iniciado. 
+2026-03-26 21:25:38,135 INFO: ============================================================ 
+2026-03-26 21:27:17,822 INFO: ============================================================ 
+2026-03-26 21:27:17,822 INFO: INICIO DE APLICACIÓN: Sistema de Autenticación iniciado. 
+2026-03-26 21:27:17,823 INFO: ============================================================ 
+2026-03-26 21:27:19,006 INFO: ============================================================ 
+2026-03-26 21:27:19,007 INFO: INICIO DE APLICACIÓN: Sistema de Autenticación iniciado. 
+2026-03-26 21:27:19,007 INFO: ============================================================ 
+2026-03-26 21:29:49,296 INFO: ============================================================ 
+2026-03-26 21:29:49,297 INFO: INICIO DE APLICACIÓN: Sistema de Autenticación iniciado. 
+2026-03-26 21:29:49,298 INFO: ============================================================ 
+2026-03-26 21:30:04,206 INFO: ============================================================ 
+2026-03-26 21:30:04,207 INFO: INICIO DE APLICACIÓN: Sistema de Autenticación iniciado. 
+2026-03-26 21:30:04,207 INFO: ============================================================ 
+2026-03-26 21:30:50,163 INFO: ============================================================ 
+2026-03-26 21:30:50,164 INFO: INICIO DE APLICACIÓN: Sistema de Autenticación iniciado. 
+2026-03-26 21:30:50,166 INFO: ============================================================ 
+2026-03-26 21:30:55,184 INFO: ============================================================ 
+2026-03-26 21:30:55,185 INFO: INICIO DE APLICACIÓN: Sistema de Autenticación iniciado. 
+2026-03-26 21:30:55,186 INFO: ============================================================ 
+2026-03-26 21:32:02,118 INFO: LOGIN EXITOSO: Usuario miriam94conchas@gmail.com (ID: 4) inició sesión desde IP: 127.0.0.1 
+2026-03-26 21:32:02,146 INFO: ACCESO A PERFIL: Usuario miriam94conchas@gmail.com (ID: 4) accedió a su perfil desde IP: 127.0.0.1 
+2026-03-26 21:32:18,735 WARNING: REGISTRO FALLIDO: Intento de crear cuenta con correo ya existente: miriam94conchas@gmail.com desde IP: 127.0.0.1 
+2026-03-26 21:32:28,250 INFO: LOGIN EXITOSO: Usuario miriam94conchas@gmail.com (ID: 4) inició sesión desde IP: 127.0.0.1 
+2026-03-26 21:32:28,262 INFO: ACCESO A PERFIL: Usuario miriam94conchas@gmail.com (ID: 4) accedió a su perfil desde IP: 127.0.0.1 
+2026-03-26 21:33:37,355 INFO: LOGIN EXITOSO: Usuario admin@example.com (ID: 2) inició sesión desde IP: 127.0.0.1 
+2026-03-26 21:33:37,374 INFO: ACCESO A PERFIL: Usuario admin@example.com (ID: 2) accedió a su perfil desde IP: 127.0.0.1 
+2026-03-26 21:34:17,758 INFO: ============================================================ 
+2026-03-26 21:34:17,759 INFO: INICIO DE APLICACIÓN: Sistema de Autenticación iniciado. 
+2026-03-26 21:34:17,759 INFO: ============================================================ 
+2026-03-26 21:34:21,770 INFO: ============================================================ 
+2026-03-26 21:34:21,770 INFO: INICIO DE APLICACIÓN: Sistema de Autenticación iniciado. 
+2026-03-26 21:34:21,771 INFO: ============================================================ 
+2026-03-26 21:35:31,971 INFO: LOGIN EXITOSO: Usuario admin@example.com (ID: 2) inició sesión desde IP: 127.0.0.1 
+2026-03-26 21:35:31,992 INFO: ACCESO A PERFIL: Usuario admin@example.com (ID: 2) accedió a su perfil desde IP: 127.0.0.1 
+2026-03-26 21:35:36,093 INFO: ACCESO A PERFIL: Usuario admin@example.com (ID: 2) accedió a su perfil desde IP: 127.0.0.1 
+2026-03-26 21:35:36,681 INFO: LOGOUT: Usuario admin@example.com ha cerrado sesión. 
+2026-03-26 21:36:28,268 WARNING: REGISTRO FALLIDO: Intento de crear cuenta con correo ya existente: conchasconchas94@gmail.com desde IP: 127.0.0.1 
+2026-03-26 21:36:51,616 INFO: NUEVO USUARIO: Nueva cuenta registrada: conchas94@gmail.com desde IP: 127.0.0.1 
+2026-03-26 21:37:10,990 INFO: LOGIN EXITOSO: Usuario conchas94@gmail.com (ID: 5) inició sesión desde IP: 127.0.0.1 
+2026-03-26 21:37:11,012 INFO: ACCESO A PERFIL: Usuario conchas94@gmail.com (ID: 5) accedió a su perfil desde IP: 127.0.0.1 
+2026-03-26 21:37:14,917 INFO: ACCESO A PERFIL: Usuario conchas94@gmail.com (ID: 5) accedió a su perfil desde IP: 127.0.0.1 
+2026-03-26 21:37:17,228 INFO: LOGOUT: Usuario conchas94@gmail.com ha cerrado sesión. 
+2026-03-26 21:39:47,369 INFO: LOGIN EXITOSO: Usuario conchas94@gmail.com (ID: 5) inició sesión desde IP: 127.0.0.1 
+2026-03-26 21:39:47,387 INFO: ACCESO A PERFIL: Usuario conchas94@gmail.com (ID: 5) accedió a su perfil desde IP: 127.0.0.1 
+2026-03-26 21:39:49,935 WARNING: ERROR 404 - Página no encontrada: http://127.0.0.1:5000/admin desde IP: 127.0.0.1 
+2026-03-26 21:39:55,750 INFO: ACCESO A PERFIL: Usuario conchas94@gmail.com (ID: 5) accedió a su perfil desde IP: 127.0.0.1 
+2026-03-26 21:40:20,658 INFO: ACCESO A PERFIL: Usuario conchas94@gmail.com (ID: 5) accedió a su perfil desde IP: 127.0.0.1 
+2026-03-26 21:40:24,492 INFO: LOGOUT: Usuario conchas94@gmail.com ha cerrado sesión. 
+2026-03-26 21:42:24,907 WARNING: ERROR 404 - Página no encontrada: http://127.0.0.1:5000/favicon.ico desde IP: 127.0.0.1 
+2026-03-26 21:42:49,609 INFO: LOGIN EXITOSO: Usuario conchas94@gmail.com (ID: 5) inició sesión desde IP: 127.0.0.1 
+2026-03-26 21:42:52,097 INFO: LOGIN EXITOSO: Usuario conchas94@gmail.com (ID: 5) inició sesión desde IP: 127.0.0.1 
+2026-03-26 21:42:52,114 INFO: ACCESO A PERFIL: Usuario conchas94@gmail.com (ID: 5) accedió a su perfil desde IP: 127.0.0.1 
+2026-03-26 21:42:57,985 INFO: ACCESO A PERFIL: Usuario conchas94@gmail.com (ID: 5) accedió a su perfil desde IP: 127.0.0.1 
+2026-03-26 21:43:00,104 INFO: ACCESO A PERFIL: Usuario conchas94@gmail.com (ID: 5) accedió a su perfil desde IP: 127.0.0.1 
+2026-03-26 21:43:01,369 INFO: LOGOUT: Usuario conchas94@gmail.com ha cerrado sesión. 
+2026-03-26 21:43:24,374 INFO: NUEVO USUARIO: Nueva cuenta registrada: conchas95@gmail.com desde IP: 127.0.0.1 
+2026-03-26 21:43:39,063 INFO: LOGIN EXITOSO: Usuario conchas95@gmail.com (ID: 6) inició sesión desde IP: 127.0.0.1 
+2026-03-26 21:43:40,551 INFO: LOGIN EXITOSO: Usuario conchas95@gmail.com (ID: 6) inició sesión desde IP: 127.0.0.1 
+2026-03-26 21:43:40,567 INFO: ACCESO A PERFIL: Usuario conchas95@gmail.com (ID: 6) accedió a su perfil desde IP: 127.0.0.1 
+2026-03-26 21:43:42,672 INFO: LOGOUT: Usuario conchas95@gmail.com ha cerrado sesión. 
+2026-03-26 21:43:50,029 WARNING: FALLO DE LOGIN: Intento fallido para el correo: miriam.conchas@wicode.com.mx desde IP: 127.0.0.1 

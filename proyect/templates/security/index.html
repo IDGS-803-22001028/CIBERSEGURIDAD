@@ -1,0 +1,19 @@
+{% extends "security/base.html" %}
+
+{% block content %}
+<div style="text-align:center; color:#fff;">
+    <div style="font-size:4rem; margin-bottom:1rem;">🔐</div>
+    <h1 style="font-size:2.5rem; font-weight:800; margin-bottom:0.5rem;">
+        Bienvenido a <span style="color:#a78bfa;">FlaskAuth</span>
+    </h1>
+    <p style="color:rgba(255,255,255,0.55); font-size:1.1rem; max-width:480px; margin:0 auto 2rem;">Sistema de Autenticación y Autorización de usuarios con Flask.</p>
+    {% if not current_user.is_authenticated %}
+    <div style="display:flex; gap:1rem; justify-content:center;">
+        <a href="{{ url_for('auth.login') }}" style="padding:0.75rem 2rem; background:linear-gradient(135deg,#7c3aed,#a78bfa); color:#fff; border-radius:10px; text-decoration:none; font-weight:600;">Iniciar Sesión</a>
+        <a href="{{ url_for('auth.register') }}" style="padding:0.75rem 2rem; background:rgba(255,255,255,0.1); color:#fff; border-radius:10px; text-decoration:none; font-weight:600; border:1px solid rgba(255,255,255,0.2);">Registrarse</a>
+    </div>
+    {% else %}
+    <a href="{{ url_for('main.profile') }}" style="padding:0.75rem 2rem; background:linear-gradient(135deg,#7c3aed,#a78bfa); color:#fff; border-radius:10px; text-decoration:none; font-weight:600;">Ver mi Perfil</a>
+    {% endif %}
+</div>
+{% endblock %}

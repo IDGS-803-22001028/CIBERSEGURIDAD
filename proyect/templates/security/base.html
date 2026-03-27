@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Autenticación con Flask</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* NAVBAR */
+        .top-navbar {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .top-navbar .brand {
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+        .top-navbar .brand span { color: #a78bfa; }
+        .nav-links { display: flex; gap: 0.5rem; align-items: center; }
+        .nav-links a {
+            color: #c4b5fd;
+            text-decoration: none;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .nav-links a:hover {
+            background: rgba(167,139,250,0.2);
+            color: #fff;
+        }
+        .nav-links a.btn-logout {
+            background: rgba(239,68,68,0.2);
+            color: #fca5a5;
+            border: 1px solid rgba(239,68,68,0.3);
+        }
+        .nav-links a.btn-logout:hover {
+            background: rgba(239,68,68,0.4);
+            color: #fff;
+        }
+
+        /* MAIN CONTENT */
+        .page-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 60px);
+            padding: 2rem;
+        }
+
+        /* CARD */
+        .card-glass {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 20px;
+            padding: 2.5rem;
+            width: 100%;
+            max-width: 440px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+        }
+
+        /* INPUTS */
+        .field { margin-bottom: 1.2rem; }
+        .field label {
+            display: block;
+            color: #c4b5fd;
+            font-size: 0.85rem;
+            margin-bottom: 0.4rem;
+            font-weight: 500;
+        }
+        .field input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border 0.2s;
+        }
+        .field input:focus {
+            border-color: #a78bfa;
+            background: rgba(167,139,250,0.1);
+        }
+        .field input::placeholder { color: rgba(255,255,255,0.35); }
+
+        /* BUTTON */
+        .btn-primary {
+            width: 100%;
+            padding: 0.85rem;
+            background: linear-gradient(135deg, #7c3aed, #a78bfa);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s, transform 0.1s;
+            letter-spacing: 0.5px;
+        }
+        .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+        .btn-primary:active { transform: translateY(0); }
+
+        /* TITLES */
+        .card-title {
+            color: #fff;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+        .card-subtitle {
+            color: rgba(255,255,255,0.45);
+            font-size: 0.9rem;
+            margin-bottom: 1.8rem;
+        }
+
+        /* ALERT */
+        .alert-danger {
+            background: rgba(239,68,68,0.15);
+            border: 1px solid rgba(239,68,68,0.3);
+            color: #fca5a5;
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1.2rem;
+            font-size: 0.9rem;
+        }
+
+        /* CHECKBOX */
+        .check-label {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.2rem;
+            cursor: pointer;
+        }
+
+        /* LINK */
+        .form-link {
+            text-align: center;
+            margin-top: 1.2rem;
+            color: rgba(255,255,255,0.45);
+            font-size: 0.85rem;
+        }
+        .form-link a { color: #a78bfa; text-decoration: none; }
+        .form-link a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <nav class="top-navbar">
+        <a href="{{ url_for('main.index') }}" class="brand">Flask<span>Auth</span></a>
+        <div class="nav-links">
+            <a href="{{ url_for('main.index') }}"><i class="fas fa-home"></i> Inicio</a>
+            {% if current_user.is_authenticated %}
+                <a href="{{ url_for('main.profile') }}"><i class="fas fa-user"></i> Perfil</a>
+                <a href="{{ url_for('auth.logout') }}" class="btn-logout"><i class="fas fa-sign-out-alt"></i> Salir</a>
+            {% else %}
+                <a href="{{ url_for('auth.login') }}"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="{{ url_for('auth.register') }}"><i class="fas fa-user-plus"></i> Registro</a>
+            {% endif %}
+        </div>
+    </nav>
+    <div class="page-content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
